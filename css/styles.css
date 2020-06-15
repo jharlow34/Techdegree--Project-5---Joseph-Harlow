@@ -13,6 +13,7 @@ body {
 
 header h1 {
     font-size: 3rem;
+    color: grey;
 
 }
 
@@ -49,7 +50,7 @@ header a {
 
 .thumbnails {
     margin: 15px;
-    border-radius: 50%;
+    border-radius: 5%;
     filter: contrast(93.5%);
 }
 
