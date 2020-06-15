@@ -1,104 +1,192 @@
+/* ========================
+        Main styles 
+===========================*/
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
-    font-size: 17px;
-    line-height: 1.5;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-.search-area {
+header h1 {
+    font-size: 3rem;
+    text-shadow: -3px 1px 6px rgba(0, 0, 0, .3);
+}
+
+header a {
+    text-decoration: none;
+}
+
+
+/* ========================
+        Body Component styles 
+===========================*/
+
+#search-field {
+    padding: 15px;
+    margin: 15px auto;
+}
+
+.search {
+    margin: 10px;
+    outline: none;
+}
+
+.search:focus {
+    outline: 1px double #32a1ce;
+}
+
+#gallery {
+    max-width: 1000px;
+    margin: 15px auto;
     display: flex;
-    justify-content: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.search-area {
-    max-width: 70%;
-    margin: 0 auto;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.grid {
-    width: 100%;
-    margin: auto;;
-}
-.grid ul {
-    padding: 0;
-}
-.grid li, .grid li a {
-    display: block;
+.thumbnails {
+    margin: 15px;
+    border-radius: 10%;
+    filter: contrast(93.5%);
 }
 
-.grid img {
-    padding: 20px 25px;
-    width: 100%;
-    height: auto;
-    display: block;
+.thumbnails:hover {
+    box-shadow: 0px 0px 1px white, 0px 0px 2px rgb(53, 60, 68), 0px 0px 3px 4px rgba(126, 139, 153, 0.25);
+    filter: contrast(105%);
+    filter: brightness(1.1);
 }
 
-input[type="text"] {
-    border-radius: 5px;
+
+/* ========================
+        Footer styles 
+===========================*/
+
+footer {
+    border-top: 2px solid rgba(70, 131, 180, 0.568);
+    margin-top: 45px;
+    padding: 30px;
+    background: rgba(105, 101, 134, 0.452);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer h3 {
+    text-shadow: -3px 1px 6px rgba(0, 0, 0, .2);
+}
+
+footer h3:hover {
+    cursor: pointer;
+}
+
+
+/* ==========================
+Styles for lightbox overrides 
+=============================*/
+
+.mfp-title {
+    text-align: center;
+    line-height: 25px;
+    color: #F3F3F3;
+    word-wrap: break-word;
     padding: 10px;
-    margin: 20px;
-    width: 200px;
-    border: 3px solid gray;
+    width: 400px;
+    margin: 0 auto;
 }
 
-@media (min-width: 480px) {
-    .grid li {
-        width: 33%;
-    }
+
+/* =========================
+        Animations 
+        
+============================*/
+
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-@media (min-width: 768px) {
+
+/* overlay animate in */
+
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+/* overlay animate out */
+
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+/* content at start */
+
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+/* content animate it */
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+
+
+/* content animate out */
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+
+
+/* ==========================
+        Media Queries  
+=============================*/
+
+@media (max-width: 800px) {
+    header,
     .container {
-        max-width: 700px;
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto;
     }
-
-    input[type="text"] {
-        width: 400px;
+    .mfp-arrow {
+        visibility: hidden;
     }
-
-    .grid img {
-        padding: 10px 15px;
+    input::placeholder {
+        font-size: 80%;
     }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 900px;
-    }
-    .grid li {
-        width: 25%;
-    }
-    input[type="text"] {
-        width: 500px;
+    .mfp-title {
+        text-align: center;
+        line-height: 15px;
+        color: #F3F3F3;
+        word-wrap: break-word;
+        padding: 15px;
+        width: 300px;
+        margin: 0 auto;
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1000px;
+@media (max-width: 350px) {
+    .search-field {
+        max-width: 200px;
     }
-    input[type="text"] {
-        width: 550px;
+    .search {
+        margin: 10px;
+        max-width: 150px;
     }
 }
-
-
-
-
