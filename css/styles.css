@@ -36,7 +36,7 @@ header a {
 }
 
 .search:focus {
-    outline: 1px double #32a1ce;
+    outline: 1px double #032836;
 }
 
 #gallery {
@@ -49,7 +49,7 @@ header a {
 
 .thumbnails {
     margin: 15px;
-    border-radius: 25%;
+    border-radius: 50%;
     filter: contrast(93.5%);
 }
 
