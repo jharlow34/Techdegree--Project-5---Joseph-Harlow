@@ -49,7 +49,7 @@ header a {
 
 .thumbnails {
     margin: 15px;
-    border-radius: 10%;
+    border-radius: 25%;
     filter: contrast(93.5%);
 }
 
