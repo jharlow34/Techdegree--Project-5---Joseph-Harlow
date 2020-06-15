@@ -65,16 +65,13 @@ header a {
 ===========================*/
 
 footer {
-    border-top: 2px solid rgba(70, 131, 180, 0.568);
+    border-top: 2px solid black;
     margin-top: 45px;
     padding: 30px;
-    background: rgba(105, 101, 134, 0.452);
+    background: lightslategray;
     color: rgba(255, 255, 255, 0.9);
 }
 
-footer h3 {
-    text-shadow: -3px 1px 6px rgba(0, 0, 0, .2);
-}
 
 footer h3:hover {
     cursor: pointer;
