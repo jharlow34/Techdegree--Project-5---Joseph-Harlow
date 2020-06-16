@@ -4,7 +4,7 @@ $('.gallery').magnificPopup({ //enables the MP plugin
     titleSrc: 'title', //captions are based on the title attribute of the <a> tags
     gallery: { enabled: true }, // enables gallery mode
     showCloseBtn: true, // Removed the "X" button to close. 
-    fixedContentPos: true, // I didn't like the scroll while the image was enlarged so it's disabled.
+    disableScrolling: false, // Want viewer to scroll items.
     removalDelay: 500,
     mainClass: 'mfp-fade' //Enables editting transitions on event start and event end
 });
